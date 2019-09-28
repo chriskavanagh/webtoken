@@ -1,0 +1,36 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiS3lsZSIsImlhdCI6MTU2OTQ1Njg1MH0.Fb1VNHw4F467LM-8sZ41uH_Hsc6PutIkAs9YJbycPbQ
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username":"Kyle"
+}
+
+###
+GET http://localhost:3000/subscribers
+
+###
+GET http://localhost:3000/subscribers/5d8c91661004b912d0245b9a
+
+###
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Johhny Rotten",
+    "subscriberToChannel": "Sex Pistols ch"
+}
+
+###
+DELETE http://localhost:3000/subscribers/5d8c91661004b912d0245b9a
+
+### 
+PATCH http://localhost:3000/subscribers/5d8ca0ee28b57017c890d7ae
+Content-Type: application/json
+
+{
+    "name": "Sid Viscious"
+}
